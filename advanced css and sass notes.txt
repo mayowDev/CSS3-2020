@@ -56,3 +56,64 @@ the 4 couners of the element where we want to be visible.
  all the way to right-bottom.
  -the third pramter of the co-ordinate moves 0 from  x-axis 
  and 100% to y-axis, so it will meet the first co-ordinate at top-center
+
+
+ Lesson 4: Header part2 -logo, h1, text
+
+:: Main points
+
+{Easiest way to Center anything with the transform, top, left properties}
+
+-img is inline element,so is good practice to put inside div/block element
+- to use top and left propeties on element we need to set it's position: absolute
+and the parent element to position relative. because that left or top 
+is refrencing to the parent element. meaning move 40px from top  parent element
+
+position : is The box's position (and possibly size) is specified with the 
+'top', 'right', 'bottom', and 'left' properties. 
+These properties specify offsets with respect to 
+the box's 'containing block' aka parent element.
+
+top:50%
+left:50%
+transform: translate(-50%, 50%); 
+
+the transform is what makes the element  center exactly
+
+
+Lesson 5: cool css animations using @keyframes
+
+
+main points: @keyframes and animation property
+
+the browser is optimized for opacity and transform when animating 
+
+backface-visibility: hidden; is used to fix the shaking element when we animate with transform
+
+
+Lesson 6: complex css animations - animate botton
+
+main points: 
+
+1- what pseduo elements and pseudo classes are
+2- How adn why to use ::after, pseudo element
+3. using transtion property to create hover over animation
+
+
+.btn:link = pseudo classe is special state of selector an anchor 
+:visted = when the user visted
+we use transform: translateY(-3px); in order to move the buttom to top when we hover
+a tag is inline element so display inline-block
+a tag or any inline element is treated like text
+
+box-shadow: x y blur = 0 10px 20px
+
+Lesson 7: complex css animations - animate button part 2
+
+pseudo:: after
+creates a virtua element
+* we have to set display: inline-bloc; because the btn is inline-block
+- the pseudo is treated as child to it's parent element
+.btn::after{width:100%} = that width 100% is the width of the btn
+animation-fill-mode:backwards; this prevents the button to be visible 
+before the animaton  start. 
