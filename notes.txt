@@ -1,0 +1,265 @@
+Section2 - natours project 
+
+lesson 2 project intro - 
+{skewed background shape, animation hover effects, menu nack bar}
+
+lesson 3 Building header part1
+
+main points in the lesson: 
+
+A: Best way to perform a basic reset is using the * universal selector
+B: Setting project-wide definitions
+C: new css feature, how to clip parts of elements using clip-path
+
+* {margin:0; paddingn:0; box-sizing: border-box;} 
+A= the starnoight * is a universal selector
+by defualt browsers apply some margin and padding to some elements
+
+B: properties placed in body element are inhertated to all the childs 
+of the body , except the padding and marging. because that applies to body
+* body{font-family:sans-serif, font-weight:400; font-size:16px;line-height:1.7; color:#777}
+* 1.7 of line-height  means, mulitply by the oringal line-heihgt by 1.7 times
+
+* vh = view port height, so 95vh means fit the element to 95% of the view heigt port
+* background-position: top; menas the top of the image stays the same
+*background-image: linear-gradient(to right, #color1, #color2), url(); 
+that makes the image stay at the top and gradient bottom, 
+the order has to be liner first and image second
+* the firs pramter of the liner gradient is used to determine where 
+the gradient goes .  
+for example: to righ bottom; the gradient would start from
+letf top to right bottom
+
+* The Clip path new css feature
+    ==========================
+Tool: https://bennettfeely.com/clippy/
+we used polygon property to make skew on right bottom
+* The polygon takes 4 cordinates/pramters of x and y axis, which stands  for
+the 4 couners of the element where we want to be visible.
+* It starts from the left-top corner and goes clockwise like below:-
+  top-left -> top-right -> right-bottom -> left-bottom.
+
+    Examples of Polygon
+    ==================
+
+ -create traiangle : clip-path: polygon(50% 0, 100% 100%, 0 100%);
+ -create skewed botom right: clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
+ -create skewd like the monal restaurent: clip-path: polygon(0 50%, 100% 0, 100% 50%, 0 100%);
+
+ Explanation of the triangel polygon: 
+ 
+ the triangel takes three prameter, beacause it's tree side
+ -first pramter moves/pushes 50% from x-axis and 0 from y-axis
+ so it will start from top-center. if we make 50% both, it will start from midl-center
+ -the second parmter tells the co-ordinate to move 100% to x-axis from where
+ it was standing which is the top-left center and 100% to y-axis which goes
+ all the way to right-bottom.
+ -the third pramter of the co-ordinate moves 0 from  x-axis 
+ and 100% to y-axis, so it will meet the first co-ordinate at top-center
+
+
+ Lesson 4: Header part2 -logo, h1, text
+
+:: Main points
+
+{Easiest way to Center anything with the transform, top, left properties}
+
+-img is inline element,so is good practice to put inside div/block element
+- to use top and left propeties on element we need to set it's position: absolute
+and the parent element to position relative. because that left or top 
+is refrencing to the parent element. meaning move 40px from top  parent element
+
+position : is The box's position (and possibly size) is specified with the 
+'top', 'right', 'bottom', and 'left' properties. 
+These properties specify offsets with respect to 
+the box's 'containing block' aka parent element.
+
+top:50%
+left:50%
+transform: translate(-50%, 50%); 
+
+the transform is what makes the element  center exactly
+
+
+Lesson 5: cool css animations using @keyframes
+
+
+main points: @keyframes and animation property
+
+the browser is optimized for opacity and transform when animating 
+
+backface-visibility: hidden; is used to fix the shaking element when we animate with transform
+
+
+Lesson 6: complex css animations - animate botton
+
+main points: 
+
+1- what pseduo elements and pseudo classes are
+2- How adn why to use ::after, pseudo element
+3. using transtion property to create hover over animation
+
+
+.btn:link = pseudo classe is special state of selector an anchor 
+:visted = when the user visted
+we use transform: translateY(-3px); in order to move the buttom to top when we hover
+a tag is inline element so display inline-block
+a tag or any inline element is treated like text
+
+box-shadow: x y blur = 0 10px 20px
+
+Lesson 7: complex css animations - animate button part 2
+
+pseudo:: after
+creates a virtua element
+* we have to set display: inline-bloc; because the btn is inline-block
+- the pseudo is treated as child to it's parent element
+.btn::after{width:100%} = that width 100% is the width of the btn
+animation-fill-mode:backwards; this prevents the button to be visible 
+before the animaton  start. 
+
+
+
+============================================================
+
+Chapter 3 - How CSS works behind the scenes
+
+Lesson 2. Three Pillars of Writing Good HTML/CSS (Never Forget Them!)
+
+- Responsivnes , Maintainable and scalable, Web perfomance
+
+*Responsivnes: Fluid layouts, units, images, media queries, mobile first
+*Maintainable: clean code, Easy-to-understand, supports Growth, Re-usable, 
+Css architucture is the way weorginize files, name class, how we structure html markup
+
+* Perfomance: less http request, less files in our html code, compress, use pre-processors, reduce images.
+
+Lesson 3. How CSS Works Behind the Scenes An Overview
+
+. what happens to css code when we load the website
+. backend: figure out domain name server, http requests etc.
+* N.B: Front-end: Browser Loads HTML -> Parse's  Html (meaning de-code line-by-line)
+-> and stores that decoded html into DOM (Dom describes the entire web it's like family tree, parents, children, sibling elements)
+-> loading CSS styles in the head when parsing the HTML 
+-> Parse Css -> There is two phase of parsing CSS,
+ A: Resolve Css Declaration conflicts through preocess called cascade
+ B: Process final CSS values(i.e: convering margin from 50% into pixels)
+ The finall parsed css code is stored in Tree-like structure called CSSOM(css object model)
+ * CSSOM + DOM = Render Tree -> browsers renders that render tree using 
+ algorithm called visual formatting modal . which calculates a bunch of stuff like box, modal , float, position
+, this algorithm has a lot to do how we write our code . -> Final website
+
+    Lesson 4. How CSS is Parsed, Part 1 The Cascade and Specificity
+    ============================================================
+
+Quick overview: CSS Terminalogy
+
+.my-class{font-size:20px; color:blue;} 
+
+.my-clsas -> selector, {} -> Declaration block, fond-size -> property, 20px -> value
+
+The parsing process part 1
+
+Cascade: combining different stylesheets and Resolving conflicts b/w different css rules and declration,
+when more than one rule applies to certain element.
+
+i.e: a tag is applied to blue color and underline by the browser(user agent) default 
+then that a tag is formated with black color and no underline by the devloper(Author)
+then the visiter user eidts temporarly on the browser.
+so it's cascade's job to resolve all those desclaertin conflict which one is temporary or permanant
+
+-Cacade Proce: Importance | Specificity |   Source order
+
+Importance::
+
+1.User !important declration 2.Author !important declration
+3. Author declration 4.User declration 5.Deafult browser Declaration
+
+- sometimes we will have conflicts in author stylesheets without !important keyword
+in this case all the declration has the same Importance, so that's when
+cascade starts calculate and compare the  Specificity of declration selectors
+
+Specificity :: the order define's the most powerfull
+
+1.Inline Styles   2. IDS  3.classes, pseudo-classes, attribute 
+4. elements and pseudo elements
+
+8min. i'm   confused with the calculation
+
+count the above selector number of occurances in  each Declaration
+- if there is declartion with inline style then thats is the winner
+- if there is no inline style the declration with the most ID wins
+- if there is no ID the declration with the most classes wins
+- if there is no classes the declration with the most elements wins
+
+Source Order::
+
+if they still have the same specifity the last Declaration 
+will be applied
+
+ ::>> Main importants to remember about cascade and specificity
+
+ *CSS Declaration marked with !important has the highest priority
+ but only use as the last solution or otherwise your code will be messy
+*inline styles will always have priority over the external stylesheets
+* a selector containing 1 ID is more specific than one with 1000 classes
+* a selector containing 1 class is more specific than one with 1000 elements
+* the universal selector has no specifity power (0,0,0,0)
+* rely more on specifity than on the order: but only rely on order when
+using third part stylesheets
+
+        Lesson 6. How CSS is Parsed, Part 2 Value Processing
+        =====================================================
+
+->author declared value -> cascade value -> specified value
+ ->computed values (convert realtive units  to pixels.
+and others like, font-size:bold; color:white; are converted to #ffffff and 700)
+->used values: remaining values depending on the layout when using %
+-> actual value : browsers dont use . value , so they round up or down
+
+-bowsers has default/ intial value : font-size:16px; padding:0px;
+
+* How units are converted from relative to absolute 
+
+- when calculaing length(margin, padding) as percent based, it refrencs the width of it's parent
+i.e: body{width:1000px} h1{padding:10%} = this padding is 100px
+- rem always uses root font-size as refrencs no matter if it's used in length or typography
+- if ems applied to typography it use it's parent computed value as refrencs
+- if ems applied to length(padding, margin), it uses the current computed element value as refrence
+- 90vh = 90%  of the viewheight browsers, 90vw = 90%  of the viewwidth of the browsers
+
+
+        Lesson 7. How CSS is Parsed, Part 3 inhertance
+        =====================================================
+
+* iheritance is passing values to child elements
+* properties related to text are inhertated and properties related
+to length (margin, padding) are not . the value inhertated is computed value
+* inhertance only works if no one is declared value that property
+
+
+        Lesson 8. PX to rem
+        =====================================================
+main points: 
+1: easy workfolow to convert px to rem
+2: how and why to convert px to rem
+
+Why:- it's helpfull for Responsivnes, so when we have breakpoints on device
+all the measurements are reduced by one global Setting which is font-size in the html tag
+-set html{font-size: 10px;}
+
+using ems instead of rem it's difficult because it depeneds on both
+ parent and root while rems only depend on root html
+
+- so now when setting media queries you just have to change the font-size
+in root
+
+
+How::
+
+setting the fon-size to px is bad practice, beacause it removes the controll
+from the users prefrence, there are some users that have browsers font default to 18 or 20px
+.but by seeting font-size to percent, it grows as the user increase
+so use % over px in the html root font-size 
+if we want 10 pixels in % = 10/16 = 0.625 = 62.5%
+
