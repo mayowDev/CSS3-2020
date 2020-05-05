@@ -44,17 +44,17 @@ body{
   /* clip-path: polygon(50% 0%, 0% 100%, 100% 100%); triangel*/
 }
 
-.logo-box{
+.header__logo-box{
   position: absolute;
   top: 4rem;
   left: 4rem;
 }
 
-.logo{
+.header__logo{
   height: 3.5rem;
 }
 
-.header-content{
+.header__content{
   position: absolute;
   text-align: center;
   top: 40%;
@@ -68,14 +68,14 @@ body{
   margin-bottom: 6rem;
   text-transform: uppercase;
 }
-.heading-primary-main{
+.heading-primary--main{
   display: block;
   font-size: 6rem;
   font-weight: 600;
   letter-spacing: 3.5rem;
   animation: moveInLeft 1s ease-out;
 }
-.heading-primary-sub{
+.heading-primary--sub{
   display: block;
   font-size: 2rem;
   font-weight: 400;
@@ -106,7 +106,7 @@ body{
   transform: translateY(-1px);
   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.3);
 }
-.btn-white{
+.btn--white{
   background-color: #fff;
   color: #777;
 }
@@ -126,7 +126,7 @@ body{
 
 }
 
-.btn-white::after{
+.btn--white::after{
   background-color: #fff;
 }
 
@@ -135,7 +135,7 @@ body{
   transform: scaleX(1.4) scaleY(1.6);
 }
 
-.animated-btn{
+.animated--btn{
   animation: moveInBottom .3s ease-out .75s;
   animation-fill-mode: backwards;
 }

@@ -146,8 +146,8 @@ Lesson 3. How CSS Works Behind the Scenes An Overview
  B: Process final CSS values(i.e: convering margin from 50% into pixels)
  The finall parsed css code is stored in Tree-like structure called CSSOM(css object model)
  * CSSOM + DOM = Render Tree -> browsers renders that render tree using 
- algorithm called visual formatting modal . which calculates a bunch of stuff like box, modal , float, position
-, this algorithm has a lot to do how we write our code . -> Final website
+ algorithm called visual formatting modal, this algorithm has a lot
+to do how we write our code . -> Final website
 
     Lesson 4. How CSS is Parsed, Part 1 The Cascade and Specificity
     ============================================================
@@ -257,9 +257,94 @@ in root
 
 How::
 
-setting the fon-size to px is bad practice, beacause it removes the controll
-from the users prefrence, there are some users that have browsers font default to 18 or 20px
+- Setting the fon-size to px is bad practice, beacause it removes the 
+controll from the users prefrence, there are some users that have browsers font default to 18 or 20px
 .but by seeting font-size to percent, it grows as the user increase
 so use % over px in the html root font-size 
 if we want 10 pixels in % = 10/16 = 0.625 = 62.5%
 
+        Lesson 9: The Visual Formatting Model
+- it's Algorithm that calculates box modal , float, position, and determines 
+the layout of the page. The algorithm takes consideration to thing like:
+
+A: dimension of the box: aka The Box Model
+B: Box type: inline, block and inline-block
+C: Position schema: floats and positioning
+D: stacking elements, viewports, dimension of images
+
+
+A:: The Box Model
+
+-every element on the page is seen as box which have margin, padding, border, fill area
+images, videos and texts go to the content are, while colors and background colors
+take the whole fil area. meaning colors and background-colors dont appl;y to padding
+
+* if u dont use box-sizing:border-box; then the VFM calculates 
+the marging and padding as part of the box, and that's bad
+
+B::Box types - block elements - inline elements, -inline-block
+
+- block elements are display:block or list-item, table; they take
+ 100% width of parent , vertically one and another
+- inline elements can't use width and heights, only padding/margin left and right
+- inline-block : mix of bot, they display as specified, only content space
+
+C::Posiotions - noraml flow, floats, absolute positions
+
+-normal flow: takes position: relateive; as default
+- floats: float:left/right; sometimes container dont adjust it's height
+to the element. and the solution is to use clear-fix. text and inline elements
+will wrap around the floated element
+- absolute: takes position:absoult;  has no impact to it's sarounding elements or content
+* we use top, left, right and bottom, to offset the element from it's relatively positioned container
+* absoult elements can overlap elements that occupying the same space.
+
+C::Stacking context is what determines which order elements are displayed
+stacking from context properties are like z-index, transform, filter, opacity 
+- the element with higher z-index appears on top and the lowset on bottom
+
+
+        Lesson 10. CSS Architecture, Components and BEM
+        ===============================================
+- Architecture, layouts, markup our code in professional / clean way
+- Recomended Process = Think, Build(code),  Architect(Folder, files structure)
+
+::Think
+Component-Driven Design architucture
+
+.uses seprate files that  are re-usable by their own, without depending
+ on parents, it's similiar to Atomic Design by brad frost
+
+Atomic design = smallest units are atoms -> molecules -> organisms -> template/Components -> pages
+
+:: Build/coding
+
+-having consistent strategy to name clases.
+- Different approaches such as: S max , OOCSS, BEM(block Element Modifier). 
+
+**BEM methadologies
+
+- block{}  is standalone component that  is meaningfull it's own
+- block__element{} is part of the block and it's meaningless by alone
+- block__element--modifier{} is used to extend/create different version of the block/ elemenet
+
+::Architect (folder and files structure)
+
+- Different approaches such as: ITCSS, S MAX, THE 7-1 Pattern
+
+** The  7-1 Pattern(mostly used)
+
+- 7 different folders for partial SASS files  and 1 main.scss filer where
+we import all other files into a compiled CSS stylesheets
+
+The seven folders name are as below mentioned:
+
+ Base folder: basic product definitation
+ Components: one file for each Component
+ Layout : define overall layout of the page
+ Pages: styles for specific pages of the project
+ Themes: if you want to implement different visual theme.
+ abstract: code that doesn't output any css(i.e: variables and mixins)
+ vendors: where all third paries of css
+
+Lesson 11: Implemetn the BEM into HTML
