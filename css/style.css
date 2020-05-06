@@ -4,115 +4,96 @@
   medium green: #55c57a
   Dark green  : #28b485
 */
-
-
-  /*================= global css settings =================*/
-
+/*================= global css settings =================*/
 *,
 *::after,
-*::before{
+*::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
-}
-html{
-  /* 62.5% of 16px */
-  font-size: 62.5%;
-}
+  box-sizing: inherit; }
 
-body{
+html {
+  /* 62.5% of 16px */
+  font-size: 62.5%; }
+
+body {
   box-sizing: border-box;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.7;
   color: #777;
-  padding: 3rem;
-}
+  padding: 3rem; }
 
 /*================= Header styles =================*/
-.header{
+.header {
   height: 95vh;
   position: relative;
-  background-image: linear-gradient(
-    to right bottom,
-   rgba(126, 213, 111, 0.5),
-   rgba(40, 131, 180, 0.9) ), 
-  url('../img/hero.jpg');
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.9)), url("../img/hero.jpg");
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
-  /* clip-path: polygon(50% 0%, 0% 100%, 100% 100%); triangel*/
-}
+  /* clip-path: polygon(50% 0%, 0% 100%, 100% 100%); triangel*/ }
 
-.header__logo-box{
+.header__logo-box {
   position: absolute;
   top: 4rem;
-  left: 4rem;
-}
+  left: 4rem; }
 
-.header__logo{
-  height: 3.5rem;
-}
+.header__logo {
+  height: 3.5rem; }
 
-.header__content{
+.header__content {
   position: absolute;
   text-align: center;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  backface-visibility: hidden; 
-  
-}
-.heading-primary{
+  backface-visibility: hidden; }
+
+.heading-primary {
   color: #fff;
   margin-bottom: 6rem;
-  text-transform: uppercase;
-}
-.heading-primary--main{
+  text-transform: uppercase; }
+
+.heading-primary--main {
   display: block;
   font-size: 6rem;
   font-weight: 600;
   letter-spacing: 3.5rem;
-  animation: moveInLeft 1s ease-out;
-}
-.heading-primary--sub{
+  animation: moveInLeft 1s ease-out; }
+
+.heading-primary--sub {
   display: block;
   font-size: 2rem;
   font-weight: 400;
   letter-spacing: 1.5rem;
-  animation: moveInRight 1s ease-out;
-
-}
-
+  animation: moveInRight 1s ease-out; }
 
 .btn:visited,
-.btn:link{
+.btn:link {
   display: inline-block;
   position: relative;
   text-transform: capitalize;
   text-decoration: none;
   font-size: 1.6rem;
-  padding:1.5rem 4rem ;
+  padding: 1.5rem 4rem;
   transition: all .2s;
-  border-radius: 10rem;
-}
+  border-radius: 10rem; }
 
-.btn:hover{
+.btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
-}
-.btn:active{
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3); }
+
+.btn:active {
   /* clicked */
   transform: translateY(-1px);
-  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.3);
-}
-.btn--white{
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3); }
+
+.btn--white {
   background-color: #fff;
-  color: #777;
-}
+  color: #777; }
 
-
-.btn::after{
+.btn::after {
   content: "";
   position: absolute;
   top: 0;
@@ -122,64 +103,43 @@ body{
   height: 100%;
   border-radius: 10rem;
   z-index: -1;
-  transition: all .4s;
+  transition: all .4s; }
 
-}
+.btn--white::after {
+  background-color: #fff; }
 
-.btn--white::after{
-  background-color: #fff;
-}
-
-.btn:hover::after{
+.btn:hover::after {
   opacity: 0;
-  transform: scaleX(1.4) scaleY(1.6);
-}
+  transform: scaleX(1.4) scaleY(1.6); }
 
-.animated--btn{
+.animated--btn {
   animation: moveInBottom .3s ease-out .75s;
-  animation-fill-mode: backwards;
-}
-
-
+  animation-fill-mode: backwards; }
 
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-10rem); 
-  }
+    transform: translateX(-10rem); }
   80% {
-    transform: translateX(1rem);
-  }
+    transform: translateX(1rem); }
   100% {
     opacity: 1;
-    transform: translate(0); 
-  }
-}
-
+    transform: translate(0); } }
 
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(10rem); 
-  }
+    transform: translateX(10rem); }
   80% {
-    transform: translateX(1rem);
-  }
+    transform: translateX(1rem); }
   100% {
     opacity: 1;
-    transform: translate(0); 
-  }
-}
+    transform: translate(0); } }
 
-
-  
-  @keyframes moveInBottom {
+@keyframes moveInBottom {
   0% {
     opacity: 0;
-    transform: translateY(3rem); 
-  }
+    transform: translateY(3rem); }
   100% {
     opacity: 1;
-    transform: translate(0); 
-  }
-}
+    transform: translate(0); } }

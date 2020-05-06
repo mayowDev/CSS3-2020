@@ -348,3 +348,68 @@ The seven folders name are as below mentioned:
  vendors: where all third paries of css
 
 Lesson 11: Implemetn the BEM into HTML
+
+
+        Chapter 4 : Intro to SASS and NPM
+        =================================
+Sass = css with elegence and super powers
+browser dont know sass code, so we have to process to convert into css
+
+Mian SASS features:
+* variables= re-usable values such as colors, fonts
+* Nesting= nest selectors inside one another. Less code
+* mixins = Re-usable code
+* Partials and imports = seprate and component based css files
+* Operators= mathematical operators inside css
+* Functions= similar to mixins, but produce valus that can be used. 
+* Extends = to make different selectors inherit Declaration that are common
+* Controll Directives = for writing  complex code  using conditionals and loops(not covered in this corse)
+
+Sass syntax = indantation sensttive. no brackets, n columns.
+SCSS syntax = indantation, brackets, columns. just like css syntax
+
+variables, nesting, mixins, etends, functions
+-how our background color disappeared and fixed by clear fix
+-built in functions lighten and darken
+- functions in sass
+
+@function divide($a, $b){ @return $a / $b};
+border-radius: divide(100, 2) * 1px; the * 1px is giving unit 
+
+@extend use  %placeholder where you store data and then @extedn that placeholder
+Diff b/w extends and mixins: @extends copy the code you extending to the place holder
+while mixins are the opposite
+-only use extends when the rules we are extending are inherently and thematically related
+in our case the buttons are related
+-
+
+* mixins are like function in javascript. they take prameters
+you can call them at some point with or without the prameters
+
+--- Lesson 5 Intro to command line
+mv = move
+rm or del = remove forver
+rm -r = delete recursively files and folder
+cp = copy
+Motivation
+open image.png = opens the file
+
+--- Lesson 6 Install sass and intro to npm
+
+--save = save to the package.js or it' will not be shown on package.json
+--save-dev = save as dev-dependenies
+
+--lesson 7. NPM Scripts Let's Write and Compile Sass Locally
+
+write this script in your package.json
+
+"compile": "node-sass sass/main.scss css/style.css -w
+
+* the sass/main.scss is the entry point
+* the css/style.css is the out point
+-w stands: for watch changes automatically, so we dont have to run the script
+
+                Lesson 8. Reloading a Page on File Changes
+- npm install live-server -g
+- Call from everywhere "live-server" command
+- or install the vs-code extension live-server 

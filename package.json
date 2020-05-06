@@ -1,0 +1,23 @@
+{
+  "name": "css3-2020",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\">\r   The Complete CSS3 Guide - 2020\r </h1>",
+  "main": "index.js",
+  "scripts": {
+    "compile": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mayowDev/CSS3-2020.git"
+  },
+  "keywords": [],
+  "author": "mayowDev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mayowDev/CSS3-2020/issues"
+  },
+  "homepage": "https://github.com/mayowDev/CSS3-2020#readme",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
