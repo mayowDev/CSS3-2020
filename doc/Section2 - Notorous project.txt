@@ -1,0 +1,122 @@
+http://codingheroes.io/resources/
+
+Section2 - natours project 
+
+lesson 2 project intro - 
+{skewed background shape, animation hover effects, menu nack bar}
+
+lesson 3 Building header part1
+
+main points in the lesson: 
+
+A: Best way to perform a basic reset is using the * universal selector
+B: Setting project-wide definitions
+C: new css feature, how to clip parts of elements using clip-path
+
+* {margin:0; paddingn:0; box-sizing: border-box;} 
+A= the starnoight * is a universal selector
+by defualt browsers apply some margin and padding to some elements
+
+B: properties placed in body element are inhertated to all the childs 
+of the body , except the padding and marging. because that applies to body
+* body{font-family:sans-serif, font-weight:400; font-size:16px;line-height:1.7; color:#777}
+* 1.7 of line-height  means, mulitply by the oringal line-heihgt by 1.7 times
+
+* vh = view port height, so 95vh means fit the element to 95% of the view heigt port
+* background-position: top; menas the top of the image stays the same
+*background-image: linear-gradient(to right, #color1, #color2), url(); 
+that makes the image stay at the top and gradient bottom, 
+the order has to be liner first and image second
+* the firs pramter of the liner gradient is used to determine where 
+the gradient goes .  
+for example: to righ bottom; the gradient would start from
+letf top to right bottom
+
+* The Clip path new css feature
+    ==========================
+Tool: https://bennettfeely.com/clippy/
+we used polygon property to make skew on right bottom
+* The polygon takes 4 cordinates/pramters of x and y axis, which stands  for
+the 4 couners of the element where we want to be visible.
+* It starts from the left-top corner and goes clockwise like below:-
+  top-left -> top-right -> right-bottom -> left-bottom.
+
+    Examples of Polygon
+    ==================
+
+ -create traiangle : clip-path: polygon(50% 0, 100% 100%, 0 100%);
+ -create skewed botom right: clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
+ -create skewd like the monal restaurent: clip-path: polygon(0 50%, 100% 0, 100% 50%, 0 100%);
+
+ Explanation of the triangel polygon: 
+ 
+ the triangel takes three prameter, beacause it's tree side
+ -first pramter moves/pushes 50% from x-axis and 0 from y-axis
+ so it will start from top-center. if we make 50% both, it will start from midl-center
+ -the second parmter tells the co-ordinate to move 100% to x-axis from where
+ it was standing which is the top-left center and 100% to y-axis which goes
+ all the way to right-bottom.
+ -the third pramter of the co-ordinate moves 0 from  x-axis 
+ and 100% to y-axis, so it will meet the first co-ordinate at top-center
+
+
+ Lesson 4: Header part2 -logo, h1, text
+
+:: Main points
+
+{Easiest way to Center anything with the transform, top, left properties}
+
+-img is inline element,so is good practice to put inside div/block element
+- to use top and left propeties on element we need to set it's position: absolute
+and the parent element to position relative. because that left or top 
+is refrencing to the parent element. meaning move 40px from top  parent element
+
+position : is The box's position (and possibly size) is specified with the 
+'top', 'right', 'bottom', and 'left' properties. 
+These properties specify offsets with respect to 
+the box's 'containing block' aka parent element.
+
+top:50%
+left:50%
+transform: translate(-50%, 50%); 
+
+the transform is what makes the element  center exactly
+
+
+Lesson 5: cool css animations using @keyframes
+
+
+main points: @keyframes and animation property
+
+the browser is optimized for opacity and transform when animating 
+
+backface-visibility: hidden; is used to fix the shaking element when we animate with transform
+
+
+Lesson 6: complex css animations - animate botton
+
+main points: 
+
+1- what pseduo elements and pseudo classes are
+2- How adn why to use ::after, pseudo element
+3. using transtion property to create hover over animation
+
+
+.btn:link = pseudo classe is special state of selector an anchor 
+:visted = when the user visted
+we use transform: translateY(-3px); in order to move the buttom to top when we hover
+a tag is inline element so display inline-block
+a tag or any inline element is treated like text
+
+box-shadow: x y blur = 0 10px 20px
+
+Lesson 7: complex css animations - animate button part 2
+
+pseudo:: after
+creates a virtua element
+* we have to set display: inline-bloc; because the btn is inline-block
+- the pseudo is treated as child to it's parent element
+.btn::after{width:100%} = that width 100% is the width of the btn
+animation-fill-mode:backwards; this prevents the button to be visible 
+before the animaton  start. 
+

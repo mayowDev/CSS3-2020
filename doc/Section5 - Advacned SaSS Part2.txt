@@ -1,0 +1,76 @@
+
+
+============================================================
+
+
+  
+                Chapter 5 Advanced sass Part 2
+                ==============================
+::lesson 2 = convert our css to sass by nesting and variables
+
+The embarsan '&' sign copies/refrence to the parent selectors  thats is beign used at.
+
+example: .header{
+        &logo-box:;
+}
+the __logo-box is transpiled as .header__logo-box{}
+
+::lesson 3 = Implemenet the 7-1 Architecture
+
+* P.s: This architecture is good for Big projects, and it's overkill to the small ones
+* All files should be _partial, so we can import into main.scss, partia files start with underscode _
+  
+abstract: codes that not output any css (variables, mixins, etc..)
+Base: all low level basics, such as hmtl , css restes, styles for body, HTML element selectors, global * 
+ 
+::lesson 4 = Basic rule for Responsive design and layout
+
+A: Fluid Grids = use % rather than px for layout related lenght(specially width),
+ cause it allows the content to easily adapt to current viewport width
+B: Flexibale and Responsive images = images behave differently compare to text
+so we need to specify it's dimensions in %, so it will adapt curretn viewport
+and also omptimize images sizes for different width
+C: Media Queries: Change style on certain viewport width(breakpoint),
+ allowing us create different version of our website to different screens
+
+Fluid and layouts: Css grid, flexbox and floats
+css grid: is two dimensional grid layout
+flexbox and float: one-dimensional layout
+
+::Lesson.5. Building a Custom Grid with Floats
+
+* How :not pseudo-class works
+* How clac() works, and whats the difference b/w, calc() and sass operations
+* Gow the attribute selector works
+* How to architect and build a simple grid system layout
+
+columns should always contain in a container called row
+
+- diffrence b/w width and max-width: maxwidth adapts 100% available space, 
+incase the window is less than the specified size
+
+- margin:0 auto; always centers to current viewport/screen size
+- :not(:last-child) : it means select everthing except last child. it's like ! JS
+atribute selector = [class^="col-"] : this means select every class
+that start with  col- . 
+- other attribute selector specification = ^  start with, $ end with, * contain; 
+
+::Our fluid layout explained
+
+- first number is number of columns it fils. if no number then each column fills it's own
+- second number is how many space do we want. a two column takes 2 space
+- third number is the columns we want for the row.  4 or 3 or 2
+
+::Lesson 6- Building the About Section - Part 1
+
+Thinking about components
+*How and Why to use Utility Clases
+- utitly class = are unique class to seprate styles of shared elements 
+around the page. and it's set as parent-wrapper around the shared element
+* How to use background-clip property
+-backgornd-clip: text; is property to Specify how far the background should extend within an element:
+in our case background should extend with the text
+* How to transform multiple properties simultaneously
+- we use our heading 2 to transform:skewY(2deg) skewX(15deg)  scale(1.1);
+How to use the outline-offset property together with outline
+How to style elements that are not hovered with others
