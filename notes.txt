@@ -339,13 +339,13 @@ we import all other files into a compiled CSS stylesheets
 
 The seven folders name are as below mentioned:
 
- Base folder: basic product definitation
- Components: one file for each Component
- Layout : define overall layout of the page
+ Base folder: basic product definitation, resets, styles for html,and body
+ Components: one file for each Component, independent, re-usable code
+ Layout : define overall layout of the page, such as header, footer, or what holds the components together
  Pages: styles for specific pages of the project
  Themes: if you want to implement different visual theme.
  abstract: code that doesn't output any css(i.e: variables and mixins)
- vendors: where all third paries of css
+ vendors: where all third paries of css, icons, bootstrap, animation libararys
 
 Lesson 11: Implemetn the BEM into HTML
 
@@ -413,3 +413,20 @@ write this script in your package.json
 - npm install live-server -g
 - Call from everywhere "live-server" command
 - or install the vs-code extension live-server 
+
+                Chapter 5 Advanced sass Part 2
+                ==============================
+::lesson 2 = convert our css to sass by nesting and variables
+
+The embarsan '&' sign copies/refrence to the parent selectors  thats is beign used at.
+
+example: .header{
+        &logo-box:;
+}
+the __logo-box is transpiled as .header__logo-box{}
+
+::lesson 3 = Implemenet the 7-1 Architecture
+
+* P.s: This architecture is good for Big projects, and it's overkill to the small ones
+
+abstract: codes that not output any css (variables, mixins, etc..)

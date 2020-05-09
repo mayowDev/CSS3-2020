@@ -4,7 +4,7 @@
   "description": "<h1 align=\"center\">\r   The Complete CSS3 Guide - 2020\r </h1>",
   "main": "index.js",
   "scripts": {
-    "compile": "node-sass sass/main.scss css/style.css -w"
+    "sass": "node-sass sass/main.scss css/style.css -w"
   },
   "repository": {
     "type": "git",

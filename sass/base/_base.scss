@@ -1,0 +1,24 @@
+/* all low level basics, such as hmtl , css restes, styles for
+ body and HTML element selectors, global * 
+ *this files should be _partial, so we can import into main.scss
+ *all partial files have underscode _
+ */
+
+  /*================= global css settings =================*/
+
+  *,
+  *::after,
+  *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
+  html{
+    /* 62.5% of 16px = 1rem=10px*/
+    font-size: 62.5%;
+  }
+  
+  body{
+    box-sizing: border-box;
+  }
+  
