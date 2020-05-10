@@ -74,3 +74,22 @@ in our case background should extend with the text
 - we use our heading 2 to transform:skewY(2deg) skewX(15deg)  scale(1.1);
 How to use the outline-offset property together with outline
 How to style elements that are not hovered with others
+
+Lesson 9: Feature section
+
+* how to include and use an icon font
+* another easy way of creating skewed background using skewY()
+* How to use direct child
+
+> * = is only all direct of the feature section. which will be row
+
+Lesson 10: Feature section
+
+how build a rotating card
+how to use perspective and backface visibility in css
+use background blend modes
+how and whe to use box-decoration break
+
+to see the perspective feature we have to apply to the parent element
+and have two element childs for both side front and back, then set back-visibilty:hidden; for back side
+perspective: is new feature the more number on perspective the better
