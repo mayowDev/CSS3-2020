@@ -102,6 +102,12 @@ body {
 .u-margin-bottom-small {
   margin-bottom: 1rem; }
 
+.u-margin-top-big {
+  margin-top: 8rem; }
+
+.u-margin-top-huge {
+  margin-top: 10rem; }
+
 .btn:visited, .btn:link {
   display: inline-block;
   position: relative;
@@ -129,6 +135,12 @@ body {
   color: #777; }
   .btn--white::after {
     background-color: #fff; }
+
+.btn--green {
+  background-color: #55c57a;
+  color: #fff; }
+  .btn--green::after {
+    background-color: #55c57a; }
 
 .btn::after {
   content: "";
@@ -215,15 +227,16 @@ body {
 .card {
   perspective: 150rem;
   -moz-perspective: 150rem;
-  height: 45rem;
-  position: relative; }
+  height: 52rem;
+  position: relative;
+  cursor: pointer; }
   .card__side {
     position: absolute;
     top: 0;
     left: 0;
     border-radius: .3rem;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-    height: 45rem;
+    height: 52rem;
     width: 100%;
     backface-visibility: hidden;
     transition: all .8s; }
@@ -233,10 +246,79 @@ body {
       transform: rotateY(180deg); }
       .card__side--back-1 {
         background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
+      .card__side--back-2 {
+        background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+      .card__side--back-3 {
+        background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
   .card:hover .card__side--front {
     transform: rotateY(-180deg); }
   .card:hover .card__side--back {
     transform: rotateY(0); }
+  .card__picture {
+    background-size: cover;
+    height: 20rem;
+    background-blend-mode: screen;
+    overflow: hidden;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: .3rem;
+    border-top-right-radius: .3rem; }
+    .card__picture--1 {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(/img/nat-5.jpg); }
+    .card__picture--2 {
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(/img/nat-6.jpg); }
+    .card__picture--3 {
+      background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(/img/nat-7.jpg); }
+  .card__heading {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 300;
+    position: absolute;
+    right: 2rem;
+    top: 12rem;
+    text-transform: capitalize;
+    text-align: right;
+    width: 70%; }
+  .card__heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone; }
+    .card__heading-span-1 {
+      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85)); }
+    .card__heading-span-2 {
+      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.85), rgba(40, 180, 133, 0.85)); }
+    .card__heading-span-3 {
+      background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.85), rgba(86, 67, 250, 0.85)); }
+  .card__details {
+    padding: 3rem; }
+    .card__details ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; }
+      .card__details ul li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+        text-transform: capitalize; }
+        .card__details ul li:not(:last-child) {
+          border-bottom: 1px solid #eee; }
+  .card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%; }
+  .card__price-box {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 8rem; }
+  .card__price-title {
+    font-size: 1.4rem;
+    text-transform: uppercase; }
+  .card__price-value {
+    font-size: 6rem;
+    font-weight: 100; }
 
 .header {
   height: 95vh;
@@ -244,6 +326,7 @@ body {
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.9)), url("../img/hero.jpg");
   background-size: cover;
   background-position: top;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
   /* clip-path: polygon(50% 0%, 0% 100%, 100% 100%); triangel*/ }
   .header__logo-box {
@@ -303,5 +386,5 @@ body {
 
 .section-tours {
   background-color: #f7f7f7;
-  padding: 25rem 0 50rem 0;
+  padding: 25rem 0 15rem 0;
   margin-top: -10rem; }

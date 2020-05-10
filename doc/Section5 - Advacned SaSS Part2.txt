@@ -93,3 +93,19 @@ how and whe to use box-decoration break
 to see the perspective feature we have to apply to the parent element
 and have two element childs for both side front and back, then set back-visibilty:hidden; for back side
 perspective: is new feature the more number on perspective the better
+
+lesson 11:
+elements in bem methodligies dont nest. like this, card__side card__side__picture
+- how element background  image should blend with color
+
+background-blend-mode properties: screen , color-burn, darken , lighten, 
+- overflow is use when the parent element is hidden by the child
+- in box-decoration, we have to have a child element and parent element to apply
+the breaking one element into two boxes: using box-decoration-break:clone;
+and little bit of manipulating the width
+
+box-decoration-break: colone; this is making one element into two boxes, by 
+applying the declartion that we have in the selector into all boxes break 
+created by width: 70%;
+
+- centering block element insdie element: margin: 0 auto;
