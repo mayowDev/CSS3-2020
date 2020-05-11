@@ -94,7 +94,7 @@ to see the perspective feature we have to apply to the parent element
 and have two element childs for both side front and back, then set back-visibilty:hidden; for back side
 perspective: is new feature the more number on perspective the better
 
-lesson 11:
+lesson 11: tour section par 2
 elements in bem methodligies dont nest. like this, card__side card__side__picture
 - how element background  image should blend with color
 
@@ -108,4 +108,30 @@ box-decoration-break: colone; this is making one element into two boxes, by
 applying the declartion that we have in the selector into all boxes break 
 created by width: 70%;
 
-- centering block element insdie element: margin: 0 auto;
+- centering block element insdie block element: margin: 0 auto;
+
+Lesson::13 - Stories section part 1
+
+- how to make text flow around  shapes with shape-outside and float
+- how to apply a filter to images
+- how to create a background video covering an entire section
+- how to use the video HTML element
+- How and why to use the object fit property
+
+* the shape-outside property defines where content floats around the element 
+first number is radius which is half of heigh. while diameter = 2*radius
+-the second number is vertically and horizantally
+-this property has to have width and heigt and must be floated where it's applied
+
+creating circle using clip-path: circle()
+
+- fix shaking/glitching elements: backface-visibilty:hidden;
+when weird thing happens while animating use backface visibility
+-sometimes instead of margin you can use translate x or y to move elemenents
+
+tommorow: solve the shaking image caption when hover over and button
+solved: the shaking image -> increase the skew-x on the shape 
+
+lessonL 15
+object-fit: cover; is like background-size:cover; it fill's the entire parent element while maintaining the aspect ratio
+and the part that dont vit the parent element it will cliped
