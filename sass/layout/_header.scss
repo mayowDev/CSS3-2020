@@ -8,9 +8,9 @@
     url('../img/hero.jpg');
     background-size: cover;
     background-position: top;
-    -webkit-clip-path:polygon(0 0, 100% 0, 100% 70vh, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
-    /* clip-path: polygon(50% 0%, 0% 100%, 100% 100%); triangel*/
+    -webkit-clip-path:polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    backface-visibility: hidden;
     &__logo-box{
       position: absolute;
       top: 4rem;

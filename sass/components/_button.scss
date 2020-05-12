@@ -1,4 +1,5 @@
 .btn{
+    &,
     &:visited,
     &:link{
         display: inline-block;
@@ -9,6 +10,9 @@
         padding:1.5rem 4rem ;
         transition: all .2s;
         border-radius: 10rem;
+        // style for button 
+        border: none;
+        cursor: pointer;
     }
 
     &:hover{
@@ -20,8 +24,9 @@
         }
     }
 
-    &:active{
+    &:active,:focus{
         /* clicked */
+        outline: none;
         transform: translateY(-1px);
         box-shadow: 0 .5rem 1rem rgba($color-black, 0.3);
     }

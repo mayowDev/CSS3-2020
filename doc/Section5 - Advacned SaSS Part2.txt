@@ -132,6 +132,31 @@ when weird thing happens while animating use backface visibility
 tommorow: solve the shaking image caption when hover over and button
 solved: the shaking image -> increase the skew-x on the shape 
 
-lessonL 15
+lesson 15. Building the Stories Section - Part 3
 object-fit: cover; is like background-size:cover; it fill's the entire parent element while maintaining the aspect ratio
 and the part that dont vit the parent element it will cliped
+
+::lesson 16. Building the Booking Section - Part 1
+
+main points to learn:
+
+*solid-color gradients, adjacent and sibling selector works, 
+* ::input-placeholder pseudo element, :focus, :checked, :invalid
+:placeholder-shown pseudo classes
+*build custome buttons
+
+new:learned 
+
+the "id" in the input works with the "for" in the lable
+<input placeholder="Full Name" id="name" required>
+<label for="name" >Full Name</label>
+
+- adjucent sibling selector  + = is the first sibling comes after the selected one
+- general sibling selector ~ = is any sibling comes after the selected one
+
+in adjecenet selector you have to be carefull the way you layout, the 
+html. input first and label second
+
+-we can not style radio buttons by default, so we have to use the span
+and hide the input radio with css,
+-forms dont take a link
