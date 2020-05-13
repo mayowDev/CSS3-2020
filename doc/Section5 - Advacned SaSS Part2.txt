@@ -160,3 +160,41 @@ html. input first and label second
 -we can not style radio buttons by default, so we have to use the span
 and hide the input radio with css,
 -forms dont take a link
+
+Lesso 20-22 navigatioin
+
+- how to create custome animation timing functions using cubic bezier
+- how to animate solid-color gradients using radial-gradient
+- what is the checkbox hack  and How it works with navigatioin
+- how and why to use trasnform-origin
+
+
+* green background
+
+radial: gradient startes  from the ceneter point
+-when we click the checkbox, we will make it bigger by using trasnform
+
+*
+linear-gradient(120deg, orangered 0%, orangered 50%, $color-white 50%);
+
+-first prameter is deg, second prameter is the start of the gradient adn etc...
+
+-making the nav disapper by seeting width: 0; and opcaity:0;
+
+* custome trasntion timing using cubic-bezier with help of easings.net or cubic-bezier.com
+we using easinoutquint for background and easinoutback for background
+
+ background-image: linear-gradient(
+            3600deg,
+            transparent 0%,
+            transparent 50%,
+            orangered 50%
+            );
+the second effect creates the style i want for my logo name on my portfolio
+
+* we will use span as placeholder for the  nav icon 
+and then manipulate with after and before pseudo, on check we will
+make background transparent
+question: waht is the differenece between :after and ::after pseqduo clases
+
+transform-origin : show where the transformation happened
