@@ -198,3 +198,13 @@ make background transparent
 question: waht is the differenece between :after and ::after pseqduo clases
 
 transform-origin : show where the transformation happened
+
+lesson: 23 Popup creatation
+
+
+how to build a pop with css only
+how to use the:target pseudo-class for id
+how to create boxes with equal height using display: table-cell;
+how to create css text coluumns
+how to automatically hyphenate words using hyphens:auto;
+
