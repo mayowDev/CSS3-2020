@@ -12,3 +12,40 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+
+// Media Query Manager
+/*
+0 - 600px: Phone
+600 - 900px: Tablet Portrait
+900 - 1200px: Tablet Landscape
+1200 - 1800px: is where our normal styles apply
+1800px + : Big Desktop
+
+$breakpoint arguement choices:
+0-600px = phone 
+600-900px = tab-port
+900-1200px = tab-land
+1200-1800pz = is our normal start desktop layout
+1800px + = big-desktop
+1em = 16px
+600px / 16 = 37.5em
+MEDIA QUERY proecess: Base + Typography > Layouts + Grid > Pages > Components
+*/
+// @contetnt = passes the whole block of code into mixins
+// @if = takes an specific arguement and then pases into mixins
+
+@mixin responsive($breakpoint){
+    @if $breakpoint == phone {
+        @media(max-width: 37.5em){ @content }; //600px to em
+    }
+    @if $breakpoint == tablet {
+        @media(max-width:56.25em){ @content }; //900px to em
+    }
+    @if $breakpoint == tablet-land {
+        @media(max-width:75em){ @content }; //1200px to em
+    }
+    @if $breakpoint == big-desktop {
+        @media(min-width:112.5em){ @content }; //1800px to em
+    }
+}

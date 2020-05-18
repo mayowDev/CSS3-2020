@@ -11,6 +11,21 @@
     /* 62.5% of 16px = 1rem=10px*/
     font-size: 62.5%;
     scroll-behavior: smooth;
+    // MEDIA QUERY ORDER: tab-land -> tab-port -> phone -> big-desktop
+    @include responsive(tablet-land){
+      font-size: 56.25%; // 56.25% of 16px = 9px = 1rem; width < 1200
+    }
+
+    @include responsive(tablet){
+      font-size: 50%; // 50% of 16px = 8px = 1rem; width < 900
+    }
+    // @include respond(phone){
+    //   font-size: 40%; // 50% of 16px = 8px = 1rem; width < 600
+    // }
+   
+    @include responsive(big-desktop){
+      font-size: 75%; // 75% of 16px = 12px = 1rem width > 1800
+    }
 
   }
   

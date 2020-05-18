@@ -1,21 +1,30 @@
 .row{
     max-width: $grid-width;
-    // background-color: #eee;
     margin:0 auto;
+    @include responsive(tablet){
+        max-width: 50%;
+        padding: 0 3rem;
+    }
     &:not(:last-child){
         margin-bottom:$horizontal-space;
+        @include responsive(tablet){
+            margin-bottom: $responsive-vertical-space;
+        }
     }
 
     @include clearfix;
     [class^="col-"]{
-        // background-color:orangered;
-        float: left;
-        // height: 5rem;
-        // color: white;
-        font-size: 1.5rem;
-        // text-align: center;
+        float: left;    
+        // font-size: 1.5rem;
+        @include responsive(tablet){
+            width: 100% !important;
+        }
         &:not(:last-child){
             margin-right: $horizontal-space;
+            @include responsive(tablet){
+                margin-right: 0;
+                margin-bottom: $responsive-vertical-space;
+            }
         }
     }
     .col-1-of-2{
