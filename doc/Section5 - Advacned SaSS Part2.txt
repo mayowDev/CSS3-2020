@@ -118,9 +118,10 @@ Lesson::13 - Stories section part 1
 - how to use the video HTML element
 - How and why to use the object fit property
 
-* the shape-outside property defines where content floats around the element 
+* the shape-outside property defines where content/text floats around the element 
 first number is radius which is half of heigh. while diameter = 2*radius
--the second number is vertically and horizantally
+-the second number is vertically and 
+-the last number controls where text moves
 -this property has to have width and heigt and must be floated where it's applied
 
 creating circle using clip-path: circle()

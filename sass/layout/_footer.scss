@@ -10,6 +10,9 @@
     &__logo-box {
       text-align: center;
       margin-bottom: 8rem;
+      @include responsive(table){
+        margin-bottom: 6rem;
+      }
     }
   
     &__logo {

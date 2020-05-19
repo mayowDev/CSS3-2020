@@ -2,7 +2,7 @@
     max-width: $grid-width;
     margin:0 auto;
     @include responsive(tablet){
-        max-width: 50%;
+        max-width: 50rem;
         padding: 0 3rem;
     }
     &:not(:last-child){

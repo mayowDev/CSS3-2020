@@ -43,3 +43,11 @@ how to use dev tools for responsive design
 - rems fail in some browsers when working with media queries, use em.
 - 1em is equal to the  default  font size coming from browser = 16px
 - The order of the media-query is important for how the browser reads, always the last media query  is applied. so the order matters
+- background-size:100%; makes sure the image fit the container horizantaly 
+
+## Topic 5 making responsive decisions
+
+- i want the image to be on top side by side, text below the images then button
+- Solution: 
+- in our content target, when we click on , wiith should fit content width: fit-content;
+- hide the whole image/right side  with width:0; and oapcity:0;

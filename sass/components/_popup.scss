@@ -21,7 +21,8 @@
         box-shadow: 0 2rem 4rem rgba($color-black, 0.2);  
         opacity: 0;
         transform: translate(-50%, -50%) scale(.25);   
-        transition: all .5s .2s;   
+        transition: all .5s .2s;  
+
     }
     &__img{
         display: block;
@@ -32,12 +33,32 @@
     &__left{
         width: 33.33333%;
         display: table-cell;
+        @include responsive(tablet) {
+            opacity: 0;
+            width: 0;
+        }
+        @include responsive(phone) {
+            opacity: 0;
+            width: 0;
+        }
     }
     &__right{
         width: 66.666667%;
         display: table-cell;
         vertical-align: middle;
         padding: 1rem 5rem;
+        @include responsive(tablet) {
+            width: 100%;
+            a {
+              margin-left: 35%;
+            }
+        }
+        @include responsive(phone) {
+            width: 100%;
+            a {
+              margin-left: 35%;
+            }
+        }
     }
     &__text{
         font-size: 1.4rem;
@@ -61,6 +82,9 @@
     &:target &__content {
         opacity: 1;
         transform: translate(-50%, -50%) scale(1);
+        @include responsive(phone) {
+            width: fit-content;
+        }
     }
     &__close {
         &:link,

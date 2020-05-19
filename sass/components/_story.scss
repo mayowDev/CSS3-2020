@@ -9,6 +9,16 @@
     font-size: $default-font-size;
     transform: skewX(-12deg);
     backface-visibility: hidden;
+    @include responsive(tablet){
+        width: 100%;
+        padding-left: 7rem;
+        padding: 4rem;
+        transform: skewX(0);
+    }
+    @include responsive(phone){
+        transform: skewX(0);
+        // margin-right: 2rem;
+    }
     &__shape{
         position: relative;
         float: left;
@@ -16,10 +26,17 @@
         width: 15rem;
         -webkit-shape-outside:circle(50% at 50% 50%);
         shape-outside: circle(50% at 50% 50%);
-        -webkit-clip-path:circle(50% at 50% 50%);
-        clip-path:circle(50% at 50% 50%);
+        -webkit-clip-path:circle(50% at 50% 40%);
+        clip-path:circle(50% at 50% 40%);
         transform: translateX(-3rem) skewX(12.01deg);
         backface-visibility: hidden;
+        @include responsive(tablet){
+            transform:translate(0) skewX(0);
+            shape-outside: circle(60% at 60% 50%);
+            -webkit-shape-outside: circle(60% at 60% 50%);
+            -webkit-clip-path:circle(50% at 30% 50%);
+            
+        }
     }
     &__img{
         height: 100%;
@@ -31,10 +48,15 @@
     &__text{
         transform: skewX(12deg);
         backface-visibility: hidden;
+        @include responsive(tablet){
+            transform: skewX(0);
+            // margin-right: 2rem;
+            
+        }
     }
     &__caption{
         text-transform: uppercase;
-        text-align: center;
+        // text-align: center;
         font-size: 1.7rem;
         color: $color-white;
         position: absolute;
@@ -44,6 +66,11 @@
         opacity: 0;
         transition: all .5s;
         backface-visibility: hidden;
+        @include responsive(tablet){
+            transform:translate(0);
+            // margin-right: 2rem;
+         
+        }
     }
     &:hover &__caption{
         opacity: 1;
