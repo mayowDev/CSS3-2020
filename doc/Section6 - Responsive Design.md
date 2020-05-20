@@ -45,9 +45,82 @@ how to use dev tools for responsive design
 - The order of the media-query is important for how the browser reads, always the last media query  is applied. so the order matters
 - background-size:100%; makes sure the image fit the container horizantaly 
 
-## Topic 5 making responsive decisions
+## Topic 5 making site responsive
 
 - i want the image to be on top side by side, text below the images then button
 - Solution: 
 - in our content target, when we click on , wiith should fit content width: fit-content;
 - hide the whole image/right side  with width:0; and oapcity:0;
+
+## Topic 7 - Responsive images
+
+- Responsive images is to serve the right image to the right screen size and device
+
+- The 3 use cases
+
+- Resoulation swtiching(serve same image but decresed resolution to small screen)
+- Density swtiching (serve same image but based on the screen resolution, double the size for high resolution screens like modern devices)
+- Art direction(serve different image on specific defices)
+
+## Topic 8 - Responsive Img in HTML - Art Direction/Density Switching
+
+- density swtiching,
+
+<img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x">
+
+- 1x= DPR - normal device pixel resolution, 2x: higher resolution
+- the 1x and 2x are the density descriptive
+- art directory
+
+<picture class="footer__logo">
+            <source
+              srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x"
+              media="(max-width: 37.5em)"
+            >
+            <img
+              srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x"
+              alt="logo"
+              class="footer__logo"
+              src="img/logo-green-2x.png"
+            >
+</picture>
+
+## Topic 9 - Density and Resolution Switching 
+
+- use srcset attribute on the img and source elements, together with density descriptors
+- how and why to use the picture elemenet for art direction
+- write media queries for html
+- resolution swiching uses the size provided, so the browser have choice which one to use.
+
+## Topic - 10 : Resposive images in css
+
+1.combine multiple condition in media queries
+2.use resolution media queries to target high-resolution screens 2x
+3.implemenet responsive images in CSS
+
+- @media (min-resolution: 192pi) and (min-width: 600px),(min-width: 600px){} - and combines two condition while , stands for or
+- 192dpi dots-per-inch = high resolution 2x
+
+- 192dpi apple retina display
+- to support safari browser for the media resolution add this line to the condition(-webkit-min-pixel-device-ratio: 2) and (min-width: 600px)
+
+## Topic 11 - Testing for Browser Support with @supports
+
+- always check caniuse.com
+- gracefull degardation with @supports fearure queries, this makes the code apply only if the brwser supports the feature used
+- use backdrop-filter: blur()
+- the filter() value of the backdrop-filter is applied to the element it self, while other value like blur() brightness(), sepia, apply to background element
+
+## Topic 12 - Build process after development
+
+- simple build process with npm scripts
+- main.sass -> style.comp.css -> style.concat.css -> style.prefix.
+- we need the build process because to reduce the http request made by brwoser
+ to work with autoprefuxer we need css postcss-cli
+css -> style.css
+- "devDependencies"
+    "autoprefixer": "^9.8.0",
+    "concat": "^1.0.3",
+    "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^7.1.1"

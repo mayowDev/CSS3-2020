@@ -24,17 +24,26 @@
         float: left;
         height: 15rem;
         width: 15rem;
-        -webkit-shape-outside:circle(50% at 50% 50%);
-        shape-outside: circle(50% at 50% 50%);
-        -webkit-clip-path:circle(50% at 50% 40%);
-        clip-path:circle(50% at 50% 40%);
-        transform: translateX(-3rem) skewX(12.01deg);
+        border-radius:50% ;
+        transform: translateX(-3rem) skewX(12deg);
         backface-visibility: hidden;
+        overflow: hidden;
+
+        @supports(clip-path: polygon(0 0)) or (-webkit-clip-path:polygon(0 0)){
+            -webkit-shape-outside:circle(50% at 50% 50%);
+            shape-outside: circle(50% at 50% 50%);
+            -webkit-clip-path:circle(50% at 50% 50%);
+            clip-path:circle(50% at 50% 50%);
+            border-radius: none;
+
+        }
         @include responsive(tablet){
             transform:translate(0) skewX(0);
-            shape-outside: circle(60% at 60% 50%);
-            -webkit-shape-outside: circle(60% at 60% 50%);
-            -webkit-clip-path:circle(50% at 30% 50%);
+            shape-outside: circle(50% at 50% 50%);
+            -webkit-shape-outside: circle(50% at 50% 50%);
+            -webkit-clip-path:circle(50% at 50% 50%);
+            clip-path:circle(40% at 50% 50%);
+            
             
         }
     }

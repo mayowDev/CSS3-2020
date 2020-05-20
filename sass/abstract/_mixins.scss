@@ -37,15 +37,15 @@ MEDIA QUERY proecess: Base + Typography > Layouts + Grid > Pages > Components
 
 @mixin responsive($breakpoint){
     @if $breakpoint == phone {
-        @media(max-width: 37.5em){ @content }; //600px to em
+        @media only screen and (max-width: 37.5em){ @content }; //600px to em
     }
     @if $breakpoint == tablet {
-        @media(max-width:56.25em){ @content }; //900px to em
+        @media only screen and (max-width:56.25em){ @content }; //900px to em
     }
     @if $breakpoint == tablet-land {
-        @media(max-width:75em){ @content }; //1200px to em
+        @media only screen and (max-width:75em){ @content }; //1200px to em
     }
     @if $breakpoint == big-desktop {
-        @media(min-width:112.5em){ @content }; //1800px to em
+        @media only screen and (min-width:112.5em){ @content }; //1800px to em
     }
 }
