@@ -124,3 +124,8 @@ css -> style.css
     "node-sass": "^4.14.1",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^7.1.1"
+
+## Topic 13 - Last touches
+
+- media only screen = only apply to screens and not prints
+- only screen(hover:none) = is for tablet or screens that dont have hover effect but with high width that exceeds the mobile media queries, like we did in card.scss
