@@ -15,7 +15,7 @@ knowing the dimension of the element, by expnading and shrinking element the ava
 
 Properties for container::
 A:flex-wrap: indicates if elements shoul start new line or not
-B: justify-content = tells how items aligned on the main axis
+B: justify-content = tells how items aligned on the main axis, only for parent element
 C: align-items: deifnes how items aligned on the cross aixs
 C: Align-content: only applie when there is more than one row, and defines how
 rows  aligned through the main axis
@@ -61,3 +61,30 @@ flex-shrink:0; element is not allowed to shrink to resize; 1 = is the allowed
 flex-wrap:wrap; start new line if there is no space for element;
 align-content:flex-start; align row from top 
 align-items:flex-start; align items from top  
+
+## Topic - 9 - Building the header part 1
+
+A:why use svg instead font icons
+B: how to find, generate and use svg sprites in HTML
+C: how to change the color of an svg icon in css
+D: how to use more advanced flexbox alignmen including justify-content,
+ align-itemd, align-self
+
+A: svg  vs icon fonts
+
+- icon fonts sometimes fail
+- screen readers(blind) cant read icon-fonts
+- scalable vecor graphics
+- iconmmon.io = converts exisiting icon-font to svg or get new svgs
+
+- sprite file/symbol-defs = global file contains all the svg files, 
+so we can request which one we want to use
+
+xhlink:href = only works servers
+
+## Topic - 10 - Building the header part 2
+
+input element dont inhertit font properties , we have to set manualay inherit
+flex item can become felx container
+::placeholder pseudo is available only on webkit
+flexobx works with text as well , so we use to ceneter  text
