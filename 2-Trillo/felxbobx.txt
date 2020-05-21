@@ -1,0 +1,63 @@
+## Topic - Flexbox
+
+- align elements to one another in different orders and directions with out
+knowing the dimension of the element, by expnading and shrinking element the available space
+- flexbox replace float layout using less, readable and logic code
+- flexbox = one dimensional layouts
+- css grids = two dimensional layout
+
+:: main concepts:
+
+- felx-items are inside a flex container 
+- main axis(x-axis) and cross- axis(y-axis)
+
+:: felxbox properties overview :
+
+Properties for container::
+A:flex-wrap: indicates if elements shoul start new line or not
+B: justify-content = tells how items aligned on the main axis
+C: align-items: deifnes how items aligned on the cross aixs
+C: Align-content: only applie when there is more than one row, and defines how
+rows  aligned through the main axis
+
+Properties for item::
+A: align-self: it's like align items but for one item only
+B: order : defines order specific item should appear 
+c:flex-basis: define base width
+d: flex-shrink: how item shrink
+e: flex-grow: how item grows
+
+## Topic 3 applying felxbox in codepen
+
+* Flex-direction:row; *(default);
+
+- row : align  items on the X-axis from left to right by defualt
+- column: align  items on the Y-axis from top to bottom by defualt
+- row-revrse: start the main (X) axis from right
+- column-reverse: start the cross(Y) axis from bottom
+
+* justify-content:flex-start; *(default)
+
+- space-between; - divides availble space between the items only, 
+meaning the first and last element margins/paddings from the window is zero
+- space-around; - divides availble space aroun the items, meaning each element 
+will have it's own evenly margin from left and right.
+- space-evenly; divide the availble space evenyl around the items 
+meaning including first element and last element will have same space as others
+- flex-end: all items end of the row.
+
+* align-items:stretch; *(default)
+
+- baseline = align through their common fector like text
+- center: align vertically center
+- flex-start: align vertical from start/top of the column;
+- flex-end: align vertical to end/down of column;
+
+
+flex-grow: 1; grows/fits to it's available space by horizantly/width
+felx: grow shrink basis; short hand code
+flex-bsis: used as width replacemnet sometine and it refres to parent contaniner width
+flex-shrink:0; element is not allowed to shrink to resize; 1 = is the allowed
+flex-wrap:wrap; start new line if there is no space for element;
+align-content:flex-start; align row from top 
+align-items:flex-start; align items from top  
