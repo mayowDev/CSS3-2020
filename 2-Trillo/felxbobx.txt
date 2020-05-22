@@ -88,3 +88,6 @@ input element dont inhertit font properties , we have to set manualay inherit
 flex item can become felx container
 ::placeholder pseudo is available only on webkit
 flexobx works with text as well , so we use to ceneter  text
+
+topic 11: sidebar part 1
+how to use scaleY, currentColor css varaible
