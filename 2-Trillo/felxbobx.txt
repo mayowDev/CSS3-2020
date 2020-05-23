@@ -91,3 +91,11 @@ flexobx works with text as well , so we use to ceneter  text
 
 topic 11: sidebar part 1
 how to use scaleY, currentColor css varaible
+
+## Topic - 13 - Building the sidebar part 2
+
+-currentColor inherits the parent element color
+- trasfom-origin: specifies where transform effect starts from , 
+mostly starts from ceneter, but we can make bottom 
+- trasnition: we can use it to animate different properties
+- z-idnex only works when we specify a position 
