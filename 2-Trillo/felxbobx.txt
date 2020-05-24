@@ -47,7 +47,8 @@ meaning including first element and last element will have same space as others
 - flex-end: all items end of the row.
 
 * align-items:stretch; *(default)
-
+stretch: the item will stretch to match the same size and width of its
+ sibling elements
 - baseline = align through their common fector like text
 - center: align vertically center
 - flex-start: align vertical from start/top of the column;
@@ -99,3 +100,16 @@ how to use scaleY, currentColor css varaible
 mostly starts from ceneter, but we can make bottom 
 - trasnition: we can use it to animate different properties
 - z-idnex only works when we specify a position 
+
+## Topic 14:  building hotel overview
+how to create an infinite animation
+how to use margin: auto with flexbox
+
+using margin-right: auto; on stars instead of flex grow in order to make occupy
+ the  right space but without the element spanding
+
+## Topic 15 - Building the Hotel Overview - Part 2 
+
+ svg behave like inline block so we have to display as flex
+
+hwo to use css masks with mask-size and mask-image
