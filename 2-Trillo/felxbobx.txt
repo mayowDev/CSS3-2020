@@ -113,3 +113,32 @@ using margin-right: auto; on stars instead of flex grow in order to make occupy
  svg behave like inline block so we have to display as flex
 
 hwo to use css masks with mask-size and mask-image
+
+## Topic 16&17 - Building the description section
+svg = are vector images in code
+
+- including svg in css using background-image as before pseudo
+- background-image:  can not change it's color, size so that's why we use the mask
+- mask alows us to see specifc part of the background we set.
+
+- box-sizing: content-box; // border and padding would add on top of the width and height
+- box-sizing: border-box; // include padding and border into width and height of element
+
+without that our images where effected by the border 3px  and shrink to small 
+
+## Topic 18 - Building the user reviews 
+
+- using html enteties in css for double quote
+refrence https://css-tricks.com/snippets/html/glyphs/
+
+## Topic 18 - Meida queries
+
+- when creating media queries the bigger one should apply first,
+ and small one last
+- biggest advantage of using flex box is when making responsive with media queries
+we can set the flex-direction: column; in order to make one top of another
+
+## Topic 22. Wrapping up the Trillo Project  and support browsers
+
+- support browsers with supports feature
+- build process and prefixes
